@@ -1,22 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import { useForm } from '../hook/useForm'
-import './effects.css'
-import { Message } from './Message'
-export const SimpleForm = () => {
+import React, { useState } from 'react';
+import './effects.css';
 
-  const { values, useValues } = useForm( {
+
+export const FormWithCustomHook = () => {
+
+  const [formState, setFormState] = useState( {
     name: '',
     email: '',
     password: '',
   } )
 
-  const { name, email, password } = values;
+  const handleInputChange = (  { target }  ) => {
+    setFormState({
+      ...formState,
+      [target.name]: target.value
+    })
+  }
+  const { name, email, password } = formState;
 
   return (
     <>
-      <h1>UseEffect</h1>
+      <h1>FormWithCustomHook</h1>
       <hr/>
-      {/* <p>Bienvenido { name }, veo que tu email { email } es algo peculiar diria yo :) </p> */}
       <div className="form-group">
         <input 
           type="text"
@@ -40,10 +45,18 @@ export const SimpleForm = () => {
           onChange={ handleInputChange }
         />
       </div>
+      <div className="form-group">
+        <input 
+          type="password"
+          name="password"
+          className="form-control"
+          placeholder="*****"
+          autoComplete="off"
+          value={ password }
+          onChange={ handleInputChange }
+        />
+      </div>
 
-      {
-        (name === '123') && <Message />
-      }
     </>
   )
 }
