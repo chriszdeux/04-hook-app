@@ -1,39 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 export const Message = () => {
-  
-  
-  
-  const [coords, setCoords] = useState({
-    x: 0,
-    y: 0,
-  })
 
-  const {x, y} = coords;
-  
+  const [coords, setCoords] = useState( { x:0, y:0 } )
+  const { x, y } = coords;
 
+  const mouseMove = (event) => {
+    const coords = { x: event.x, y:event.y };
+    setCoords(coords);
+  }
 
-  useEffect(() => {
+  useEffect(() => {  
+    window.addEventListener('mousemove', mouseMove);
+    window.addEventListener('')
 
-    const myMouseMove = ( event ) => {
-      const coords = { x:event.x, y:event.y }
-      setCoords(coords)
-      // console.log(coords)
+    return () => {
+      window.removeEventListener('mousemove', mouseMove)
     }
-  
+    
+  }, [])
 
-    window.addEventListener('mousemove', myMouseMove)
-
-    return ( ) => {
-      window.removeEventListener('mousemove', myMouseMove)
-    }
-  }, []) 
   return (
     <>
-      <h3>You found the secret message</h3>
-      <p>
-        coord x: { x }, coord y: { y }
-      </p>
+      <h2>Secret message</h2>
+      <h3>Coords x: {x} y: {y}</h3>
     </>
   )
 }

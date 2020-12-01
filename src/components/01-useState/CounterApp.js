@@ -25,7 +25,7 @@ export const CounterApp = () => {
           counter1: counter1 + 1,
         })
       }
-       }
+      }
       >+1</button>
 
       <button className='btn btn-secondary'
