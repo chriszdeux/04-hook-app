@@ -4,11 +4,19 @@ export const useCounter = ( initialState = 0 ) => {
   const [counter, setCounter] = useState(initialState)
 
   const increment = () => {
-    setCounter(counter + 1);
+    setCounter(counter + 1)
+    
+  }
+  
+  const decrement = () => {
+    // (undefined)
+    //   ? setCounter(initialState)
+    //   : setCounter(counter - 1)
+    setCounter(counter - 1)
   }
 
-  const decrement = () => {
-    setCounter(counter - 1)
+  const initialPosition = () => {
+    setCounter(initialState)
   }
 
   const reset = () => {
@@ -19,6 +27,7 @@ export const useCounter = ( initialState = 0 ) => {
     counter,
     increment,
     decrement,
-    reset
+    reset,
+    initialPosition,
   }
 }
