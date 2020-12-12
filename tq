@@ -1,0 +1,84 @@
+[33mcommit 42098964a2ae37c187a363d4c2b4483334940077[m[33m ([m[1;36mHEAD -> [m[1;32mreducer[m[33m)[m
+Merge: 1bb9247 7ff2f54
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Sat Dec 12 11:52:08 2020 -0800
+
+    done TodoApp
+
+[33mcommit 1bb924770449dc872ffe90b8ce2e61da835b5284[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Sat Dec 12 11:40:07 2020 -0800
+
+    TodoApp done
+
+[33mcommit 7ff2f54c6302454f9822dcf7249a3063470e6d9a[m[33m ([m[1;31morigin/reducer[m[33m)[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Sat Dec 12 11:40:07 2020 -0800
+
+    done with todo app
+
+[33mcommit 069e837a5279b307f77a752ecaa20828473b70b0[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Sat Dec 12 09:00:17 2020 -0800
+
+    Deleting task
+
+[33mcommit 3f44893c8705f265037f242d7d07ef65da8c28ad[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Sat Dec 12 08:12:08 2020 -0800
+
+    saving data in localstorage
+
+[33mcommit c4aa7f5071c113149f19be141bf5b44a92bb05e0[m[33m ([m[1;31morigin/customHook[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcustomHook[m[33m)[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Fri Dec 11 14:09:26 2020 -0800
+
+    app todo
+
+[33mcommit abec119471e0cd55f11cfe8a9374bd3f1f50a834[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Tue Dec 1 16:52:04 2020 -0800
+
+    working with memo react
+
+[33mcommit 21c5b296ed0b309ccd4a9453eacb3e77402fdd95[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Tue Dec 1 13:34:32 2020 -0800
+
+    Form with custom hook
+
+[33mcommit 6498e6ba44765384eea6a1f81a58536c08b54b2f[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Tue Dec 1 13:05:28 2020 -0800
+
+    FormCusmotEffect
+
+[33mcommit c7ad52cdf39615f3c12ed77fa758de591bc5e48b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Wed Nov 25 14:38:10 2020 -0800
+
+    new mods
+
+[33mcommit bfbe8f14c70a9aebdb96da0cf0119fca2fdef7d5[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Wed Nov 25 09:47:22 2020 -0800
+
+    useForm own
+
+[33mcommit 0cdb68a4596f1da4b27fab8b6473dc724fc52c94[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Wed Nov 25 08:53:06 2020 -0800
+
+    useEffect Coords
+
+[33mcommit 8721700286cb0107e6a3898e220a6f3eb2ce9988[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Mon Nov 23 10:44:44 2020 -0800
+
+    working on hooks
+
+[33mcommit 38a20ae6fead6a90ad5024cca1e4ada7068428b9[m
+Author: chriszdeux <chriszdeux@gmail.com>
+Date:   Mon Nov 23 04:43:15 2020 -0800
+
+    Initialize project using Create React App
