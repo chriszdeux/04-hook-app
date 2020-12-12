@@ -10,7 +10,7 @@ export const TodoForm = ( { handleAddTodo } ) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if( description.trim().lenght <=  1) {
+    if( description.trim().length <=  1) {
       return
     }
 
