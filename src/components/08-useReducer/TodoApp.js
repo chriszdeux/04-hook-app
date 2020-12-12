@@ -1,19 +1,62 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
+import { useForm } from '../../hook/useForm';
 import './todo-style.css';
 import { myReducer } from './todoReducer';
 
 
-const initialState = [{
-  id: new Date().getTime(),
-  description: 'Learn React Reduce',
-  done: false
-}]
+const init = () => {
+
+  return JSON.parse( localStorage.getItem('todos') ) || []
+  // return [{
+  //   id: new Date().getTime(),
+  //   description: 'Learn React Reduce',
+  //   done: false
+  // }]
+}
 
 
 export const TodoApp = () => {
 
-  const [ todos ] = useReducer(myReducer, initialState)
-  console.log(todos)
+  const [ todos, dispatch ] = useReducer(myReducer, [], init);
+
+  const [ { description }, handleInputChange, resetForm ] = useForm({
+    description: ''
+  });
+  console.log(description);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
+
+  const handleSubmit = ( event ) => {
+    
+    if (description.trim().length <= 1) {
+      return 
+    }
+
+    event.preventDefault();
+    console.log('new task');
+
+
+    const newAdd = {
+      id: new Date().getTime(),
+      description: description,
+      done: false
+    };
+
+    const addAction = {
+      type: 'add',
+      payload: newAdd
+    };
+
+    dispatch(addAction);
+    resetForm();
+
+
+  }
+
+
   return (
     <>
       <h1>TodoApp: { todos.length }</h1>
@@ -38,12 +81,14 @@ export const TodoApp = () => {
           <div className="col-5">
             <h4>Add Todo</h4>
             <hr/>
-            <form>
+            <form onSubmit={ handleSubmit }>
               <input type="text" 
               className="form-control"
               placeholder="add todo"
               autoComplete="off"
               name="description"
+              value={ description }
+              onChange={ handleInputChange }
               />
             <button className="btn btn-outline-primary mt-1 btn-block">Add</button>
             </form>
