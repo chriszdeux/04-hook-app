@@ -1,10 +1,3 @@
-const initialState = [{
-  id: 1,
-  todo: 'buy sexual toys to my wife',
-  done: false 
-}];
-
-
 const todoReducer = ( state = initialState, action ) => {
 
   if (action?.type === 'add') {
